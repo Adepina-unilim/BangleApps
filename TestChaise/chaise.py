@@ -79,7 +79,7 @@ def calculNbre() :
 	        med = median(tab)
 
 
-	    if (sup == False):
+	    if (sup == False) :
             if (axf[i]>med):
                 sup = True
                 compteur = compteur +1
@@ -87,7 +87,7 @@ def calculNbre() :
 
 
 	    if (sup == True) :
-		    if (axf[I]<med):
+		    if (axf[i]<med):
 			    sup = False
 			    compteur = compteur +1
     
