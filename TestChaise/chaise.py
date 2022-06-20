@@ -126,4 +126,4 @@ def filtrage(valeurs) :
 
 a = calculNbre()
 
-st.text("le compteur est", compteur)
+st.text("le compteur est" + compteur)
