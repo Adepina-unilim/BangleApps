@@ -1,23 +1,20 @@
 
 function showMenu() {
   var menu = {
-    "" : { title : /*LANG*/"Test du lever de chaise" },
+    "" : { title : /*LANG*/"Adepina - Chaise" },
     "< Retour" : function() {
       load();
-    },
 
     /*LANG*/"Commencer" : function() {
       E.showMenu();
       startRecord();
     },
+    /*LANG*/"Voir les données" : function() {
+      viewLogs();
+    },
   };
   E.showMenu(menu);
 }
-
-
-  E.showMenu(menu);
-}
-
 
 function startRecord(force) {
   if (!force) {
