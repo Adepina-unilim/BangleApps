@@ -7,5 +7,5 @@ Enregistre les données issues du magnétomètre et de l'accéléromètre (à la
 
 * Aller sur l'App Loader d'Adepina
 * Se connecter à la montre via Bluetooth
-* Dans l'onglet `My Apps`, cliquer sur l'application `Adepina`
+* Dans l'onglet `My Apps`, cliquer sur le logo `données` de l'application `Adepina`
 * Vous pouvez alors enregistrer ou supprimer les données :)
