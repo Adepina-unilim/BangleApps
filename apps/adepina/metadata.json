@@ -1,0 +1,17 @@
+{
+  "id": "adepina",
+  "name": "Adepina",
+  "shortName": "Adepina",
+  "version": "1.0",
+  "description": "Enregistre les données issues du magnétomètre et de l'accéléromètre au format CSV",
+  "icon": "app.png",
+  "tags": "outdoor",
+  "supports": ["BANGLEJS","BANGLEJS2"],
+  "readme": "README.md",
+  "interface": "interface.html",
+  "storage": [
+    {"name":"adepina.app.js","url":"app.js"},
+    {"name":"adepina.img","url":"app-icon.js","evaluate":true}
+  ],
+  "data": [{"wildcard":"accellog.?.csv"}]
+}
