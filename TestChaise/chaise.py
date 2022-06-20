@@ -8,6 +8,7 @@ import statistics
 
 
 def _max_width_():
+    global Ax
     max_width_str = f"max-width: 1800px"
     st.markdown(
         f"""
@@ -44,7 +45,7 @@ with c30:
     if uploaded_file is not None:
         file_container = st.expander("Vérifier le document déposé")
         shows = pd.read_csv(uploaded_file)
-        global Ax = shows['AX'].tolist()
+        Ax = shows['AX'].tolist()
         uploaded_file.seek(0)
         file_container.write(shows)
 
