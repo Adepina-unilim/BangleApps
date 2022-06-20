@@ -3,11 +3,6 @@ import pandas as pd
 from PIL import Image
 import numpy as np
 
-
-###################################
-
-from functionforDownloadButtons import download_button
-
 ###################################
 
 
