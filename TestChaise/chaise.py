@@ -57,7 +57,7 @@ with c30:
     
 
 data = pd.read_csv(uploaded_file, 'r')
-Ax = data['Ax'].tolist()
+Ax = data['AX'].tolist()
 
 print(Ax)
 
