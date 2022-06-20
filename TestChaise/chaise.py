@@ -94,7 +94,8 @@ def calculNbre() :
 
 def filtrage(valeurs) :
 
-    sortie = []
+
+    sortie = [0]*len(valeurs)
 
     B1 = 0.001832160233696078
     B2 = 0.007328640934784310
