@@ -1,0 +1,16 @@
+{
+  "id": "leverchaise",
+  "name": "Test du Lever de Chaise",
+  "shortName": "Lever de Chaise",
+  "version": "1.0",
+  "description": "Calcul le nombre de levers de chaise",
+  "icon": "app.png",
+  "tags": "outdoor",
+  "supports": ["BANGLEJS","BANGLEJS2"],
+  "readme": "README.md",
+  "interface": "interface.html",
+  "storage": [
+    {"name":"leverchaise.app.js","url":"app.js"},
+    {"name":"chaise.img","url":"app-icon.js","evaluate":true}
+  ]
+}
