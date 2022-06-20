@@ -45,7 +45,7 @@ function viewLog(n) {
   menu[/*LANG*/"DELETE"] = function() {
     E.showPrompt(/*LANG*/"Supprimer les données "+n).then(ok=>{
       if (ok) {
-        E.showMessage(/*LANG*/"Supression...");
+        E.showMessage(/*LANG*/"Suppression...");
         f.erase();
         viewLogs();
       } else viewLog(n);
