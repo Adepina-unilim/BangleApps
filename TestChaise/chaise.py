@@ -56,7 +56,7 @@ with c30:
         st.stop()
     
 
-data = pandas.read_csv(uploaded_file, 'r')
+data = pd.read_csv(uploaded_file, 'r')
 Ax = data['Ax'].tolist()
 
 print(Ax)
