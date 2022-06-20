@@ -67,8 +67,8 @@ def calculNbre() :
 
     axf = filtrage(Ax)
 
-    st.line_chart(axf)
-    
+    st.line_chart(ax, axf)
+
     #calcul nbre de lever de chaise
 
     M = 25 #Mediane glissante toutes les deux secondes
