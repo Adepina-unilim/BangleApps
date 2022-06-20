@@ -34,9 +34,10 @@ c29, c30, c31 = st.columns([1, 6, 1])
 with c30:
 
     uploaded_file = st.file_uploader(
+        label = "Choisir un fichier .csv",
         key="1",
         help="Pour activer le 'mode étendu', aller dans le menu latéral > Settings > turn on 'wide mode'",
-        label = "Glisser-déposer un fichier CSV ici",
+        
     )
 
     if uploaded_file is not None:
@@ -48,10 +49,21 @@ with c30:
     else:
         st.info(
             f"""
-                👆 Glisser-déposer un .csv avec des accélérations et des champs magnétiques brutes
+                👆 Importer ici les données brutes issues de l'accéléromètre et du magnétomètre
                 """
         )
 
         st.stop()
+
+        st.markdown(
+    """
+    <style>
+        .css-9ycgxx::after {
+            content: "Glisser-déposer un fichier";
+        }
+    <style>
+    """, unsafe_allow_html=True)
+
+fileup = st.file_uploader("Hello")
 
 
