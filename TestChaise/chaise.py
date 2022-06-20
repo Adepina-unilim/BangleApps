@@ -60,6 +60,7 @@ with c30:
     
 
 def calculNbre() :
+    global compteur
 
     #filtrage des données
     st.text(Ax[0])
@@ -125,4 +126,4 @@ def filtrage(valeurs) :
 
 a = calculNbre()
 
-st.text(a)
+st.text("le compteur est", compteur)
