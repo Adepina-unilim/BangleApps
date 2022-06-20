@@ -80,9 +80,9 @@ def calculNbre() :
 
 
 	    if (sup == False):
-		    if (axf[i]>med):
-			    sup = True
-			    compteur = compteur +1
+            if (axf[i]>med):
+                sup = True
+                compteur = compteur +1
 
 
 
