@@ -81,7 +81,7 @@ def calculNbre() :
             if (axf[i]>med):
                 sup = True
                 compteur = compteur +1
-	    if (sup == True):
+        if (sup == True):
 		    if (axf[i]<med):
 			    sup = False
 			    compteur = compteur +1
