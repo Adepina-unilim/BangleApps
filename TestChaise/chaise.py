@@ -77,7 +77,7 @@ def calculNbre() :
         if (i < M+1):
             med = sta.median(axf)
         else :
-            tab = axf(i-M, i)
+            tab = axf[i-M: i]
             med = sta.median(tab)
         if (sup == False):
             if (axf[i]>med):
