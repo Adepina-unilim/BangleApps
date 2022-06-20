@@ -2,12 +2,13 @@ import streamlit as st
 import pandas as pd
 from PIL import Image
 import numpy as np
+import statistics
 
 ###################################
 
 
 def _max_width_():
-    max_width_str = f"max-width: 1800px;"
+    max_width_str = f"max-width: 1800px"
     st.markdown(
         f"""
     <style>
@@ -43,7 +44,7 @@ with c30:
     if uploaded_file is not None:
         file_container = st.expander("Vérifier le document déposé")
         shows = pd.read_csv(uploaded_file)
-        AX = shows['AX'].tolist()
+        Ax = shows['AX'].tolist()
         uploaded_file.seek(0)
         file_container.write(shows)
 
@@ -57,6 +58,72 @@ with c30:
         st.stop()
     
 
-st.text(AX)
+def calculNbre() :
+
+    #filtrage des données
+
+    axf = filtrage(Ax)
+
+    #calcul nbre de lever de chaise
+
+    M = 25 #Mediane glissante toutes les deux secondes
+    med = 0
+    sup = False
+    compteur = 0
+
+    for i in range (4, len(axf)) :
+        if (i < M+1):
+            med = median(axf)
+        else :
+	        tab = axf(i-M, i)
+	        med = median(tab)
 
 
+	    if (sup == False):
+		    if (axf[i]>med):
+			    sup = True
+			    compteur = compteur +1
+
+
+
+	    if (sup == True) :
+		    if (axf[I]<med):
+			    sup = False
+			    compteur = compteur +1
+    
+    return compteur/2		
+
+
+
+
+def filtrage(valeurs) :
+
+    sortie = []
+
+    B1 = 0.001832160233696078
+    B2 = 0.007328640934784310
+    B3 = 0.001099296140218
+    B4 = 0.007328640934784310
+    B5 = 0.001832160233696078
+
+    A1 = 1
+    A2 = 3.344067837711877
+    A3 = 4.238863950884072
+    A4 = 2.409342856586324
+    A5 = 0.517478199788042 
+
+    sortie[0] = B1 * valeurs[0]
+
+    sortie[1] = B1 * valeurs[1] + B2 * valeurs[0] - A2 * sortie[0]
+
+    sortie[2] = B1 * valeurs[2] + B2 * valeurs[1] + B3 * valeurs[0] - A2 * sortie[1] - A3 * sortie[0]
+
+    sortie[3] = B1 * valeurs[3] + B2 * valeurs[2] + B3 * valeurs[1] + B4 * valeurs [0] - A2 * sortie[2] - A3 * sortie[1] - A4 * sortie[0]
+
+    for i in range (4, len(valeurs)):
+        sortie[i] = B1 * valeurs[i] + B2 * valeurs[i-1] + B3 * valeurs[i-2] + B4 * valeurs [i-3] +  B5 * valeurs [i-4] - A2 * sortie[i-1] - A3 * sortie[i-2] - A4 * sortie[i-3] - A5 * sortie[i-4]
+
+
+    return sortie
+
+st.text(CalculNbre())
