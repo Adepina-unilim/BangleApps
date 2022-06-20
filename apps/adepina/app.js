@@ -92,11 +92,11 @@ function startRecord(force) {
 
   var Layout = require("Layout");
   var layout = new Layout({ type: "v", c: [
-      {type:"txt", font:"6x8", label:/*LANG*/"Samples", pad:2},
+      {type:"txt", font:"6x8", label:/*LANG*/"Valeurs", pad:2},
       {type:"txt", id:"samples", font:"6x8:2", label:"  -  ", pad:5, bgCol:g.theme.bg},
-      {type:"txt", font:"6x8", label:/*LANG*/"Time", pad:2},
+      {type:"txt", font:"6x8", label:/*LANG*/"Temps", pad:2},
       {type:"txt", id:"time", font:"6x8:2", label:"  -  ", pad:5, bgCol:g.theme.bg},
-      {type:"txt", font:"6x8:2", label:/*LANG*/"RECORDING", bgCol:"#f00", pad:5, fillx:1},
+      {type:"txt", font:"6x8:2", label:/*LANG*/"ENREGISTREMENT", bgCol:"#f00", pad:5, fillx:1},
     ]
   },{btns:[ // Buttons...
     {label:/*LANG*/"STOP", cb:()=>{
