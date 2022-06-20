@@ -54,16 +54,11 @@ with c30:
         )
 
         st.stop()
+    
 
-        st.markdown(
-    """
-    <style>
-        .css-9ycgxx::after {
-            content: "Glisser-déposer un fichier";
-        }
-    <style>
-    """, unsafe_allow_html=True)
+data = read_csv(uploaded_file, 'r')
+Ax = data['Ax'].tolist()
 
-fileup = st.file_uploader("Hello")
+print(Ax)
 
 
