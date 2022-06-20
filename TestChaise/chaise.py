@@ -6,4 +6,4 @@ from PIL import Image
 image = Image.open('TestChaise/app.png')
 
 st.title('Le test du Lever de Chaise')
-st.image(image, width=5)
+st.image(image, width=50)
