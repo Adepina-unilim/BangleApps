@@ -43,7 +43,7 @@ with c30:
     if uploaded_file is not None:
         file_container = st.expander("Vérifier le document déposé")
         shows = pd.read_csv(uploaded_file)
-        Ax = shows['AX'].tolist()
+        AX = shows['AX'].tolist()
         uploaded_file.seek(0)
         file_container.write(shows)
 
@@ -57,6 +57,6 @@ with c30:
         st.stop()
     
 
-print(Ax)
+print(AX)
 
 
