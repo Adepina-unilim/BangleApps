@@ -120,4 +120,6 @@ def filtrage(valeurs) :
 
     return sortie
 
-st.text(CalculNbre())
+a = calculNbre()
+
+st.text(a)
