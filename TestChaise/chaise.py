@@ -71,22 +71,17 @@ def calculNbre() :
     sup = False
     compteur = 0
 
-    for i in range (4, len(axf)) :
+    for i in range (4, len(axf)):
         if (i < M+1):
             med = median(axf)
         else :
-	        tab = axf(i-M, i)
-	        med = median(tab)
-
-
-	    if (sup == False) :
+            tab = axf(i-M, i)
+            med = median(tab)
+        if (sup == False):
             if (axf[i]>med):
                 sup = True
                 compteur = compteur +1
-
-
-
-	    if (sup == True) :
+	    if (sup == True):
 		    if (axf[i]<med):
 			    sup = False
 			    compteur = compteur +1
