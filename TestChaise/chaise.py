@@ -62,6 +62,7 @@ with c30:
 def calculNbre() :
 
     #filtrage des données
+    st.text(Ax[0])
 
     axf = filtrage(Ax)
 
