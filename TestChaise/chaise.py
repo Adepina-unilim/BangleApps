@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 from PIL import Image
 import numpy as np
-import statistics
+import statistics as sta
 
 ###################################
 
@@ -75,10 +75,10 @@ def calculNbre() :
 
     for i in range (4, len(axf)):
         if (i < M+1):
-            med = median(axf)
+            med = sta.median(axf)
         else :
             tab = axf(i-M, i)
-            med = median(tab)
+            med = sta.median(tab)
         if (sup == False):
             if (axf[i]>med):
                 sup = True
