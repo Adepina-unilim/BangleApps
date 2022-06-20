@@ -34,7 +34,6 @@ c29, c30, c31 = st.columns([1, 6, 1])
 with c30:
 
     uploaded_file = st.file_uploader(
-        "",
         key="1",
         help="Pour activer le 'mode étendu', aller dans le menu latéral > Settings > turn on 'wide mode'",
         label = "Glisser-déposer un fichier CSV ici",
