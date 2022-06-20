@@ -37,7 +37,7 @@ with c30:
         "",
         key="1",
         help="Pour activer le 'mode étendu', aller dans le menu latéral > Settings > turn on 'wide mode'",
-        label = "Glisser-déposer un fichier CSV ici"
+        label = "Glisser-déposer un fichier CSV ici",
     )
 
     if uploaded_file is not None:
