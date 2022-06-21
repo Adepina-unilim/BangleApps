@@ -119,7 +119,7 @@ def filtrage(valeurs) :
     A4 = 2.409342856586324
     A5 = 0.517478199788042 
 
-    sortie[0] = B1
+    sortie[0] = B1 * valeurs[0]
 
     st.text("sortie[0]" + str(sortie[0])) 
 
