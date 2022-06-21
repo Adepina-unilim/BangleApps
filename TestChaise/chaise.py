@@ -95,7 +95,7 @@ def calculNbre() :
                 compteur = compteur +1
     
     st.text("ax(0)" + str(Ax[0]))
-    st.text("axf(0)" + str(axf[0]))
+    st.text("axf(30)" + str(axf[30]))
 
     return compteur/2		
 
