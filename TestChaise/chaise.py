@@ -25,7 +25,7 @@ st.set_page_config(page_icon="'TestChaise/app.png'", page_title="Le test du Leve
 
 col1,col2 = st.columns(2)
 
-st.image('TestChaise/AdepinaLogo.png', width = 100, )
+st.image('TestChaise/Adepina logo noir.png', width = 100, )
 
 
 st.title("Le test du Lever de Chaise")
