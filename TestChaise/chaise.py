@@ -3,9 +3,29 @@ import pandas as pd
 from PIL import Image
 import numpy as np
 import statistics as sta
+import base64
 
 ###################################
 
+main_bg = "fond.jpg"
+main_bg_ext = "jpg"
+
+side_bg = "fond.jpg"
+side_bg_ext = "jpg"
+
+st.markdown(
+    f"""
+    <style>
+    .reportview-container {{
+        background: url(data:image/{main_bg_ext};base64,{base64.b64encode(open(main_bg, "rb").read()).decode()})
+    }}
+   .sidebar .sidebar-content {{
+        background: url(data:image/{side_bg_ext};base64,{base64.b64encode(open(side_bg, "rb").read()).decode()})
+    }}
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 def _max_width_():
     global Ax
