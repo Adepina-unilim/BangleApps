@@ -33,7 +33,6 @@ set_png_as_page_bg('TestChaise/fond.png')
 
 
 
-
 st.image('TestChaise/Adepina logo blanc.png' )
 
 
