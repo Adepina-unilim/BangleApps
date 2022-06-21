@@ -41,7 +41,7 @@ def _max_width_():
         unsafe_allow_html=True,
     )
 
-st.set_page_config(page_icon="'TestChaise/app.png'", page_title="Le test du Lever de Chaise")
+#st.set_page_config(page_icon="'TestChaise/app.png'", page_title="Le test du Lever de Chaise")
 
 col1,col2 = st.columns(2)
 
