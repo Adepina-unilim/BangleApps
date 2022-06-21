@@ -15,20 +15,23 @@ def get_base64_of_bin_file(bin_file):
         data = f.read()
     return base64.b64encode(data).decode()
 
-def set_png_as_page_bg(png_file):
-    bin_str = get_base64_of_bin_file(png_file)
-    page_bg_img = '''
-    <style>
-    .stApp {
-    background-image: url("data:image/png;base64,%s");
-    background-size: cover;
-    }
-    </style>
-    ''' % bin_str
-    st.markdown(page_bg_img, unsafe_allow_html=True)
-    return
+# def set_png_as_page_bg(png_file):
+#     bin_str = get_base64_of_bin_file(png_file)
+#     page_bg_img = '''
+#     <style>
+#     .stApp {
+#     background-image: url("data:image/png;base64,%s");
+#     background-size: cover;
+#     }
+#     </style>
+#     ''' % bin_str
+#     st.markdown(page_bg_img, unsafe_allow_html=True)
+#     return
 
-set_png_as_page_bg('TestChaise/fond.png')
+# set_png_as_page_bg('TestChaise/fond.png')
+
+[theme]
+base="dark"
 
 st.markdown(""" <style>
 #MainMenu {visibility: hidden;}
