@@ -8,7 +8,7 @@ import base64
 ###################################
 
 
-@st.cache(allow_output_mutation=True)
+""" @st.cache(allow_output_mutation=True)
 def get_base64_of_bin_file(bin_file):
     with open(bin_file, 'rb') as f:
         data = f.read()
@@ -31,9 +31,9 @@ def set_png_as_page_bg(png_file):
     return
 
 set_png_as_page_bg('TestChaise/fond.png')
+ """
 
-
-#st.set_page_config(page_icon="'TestChaise/app.png'", page_title="Le test du Lever de Chaise")
+st.set_page_config(page_icon="'TestChaise/app.png'", page_title="Le test du Lever de Chaise")
 
 
 st.image('TestChaise/Adepina logo blanc.png' )
