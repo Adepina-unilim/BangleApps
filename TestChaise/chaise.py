@@ -39,9 +39,12 @@ st.image('TestChaise/Adepina logo blanc.png' )
 
 st.title("Le test du Lever de Chaise")
 
-agree = st.checkbox("I agree")
+cent = False;
+
+cisteme = st.checkbox("J'utilise une montre CISTEME")
 if agree:
-    st.checkbox("Great", value = True)
+    cent = True
+    
 
 c29, c30, c31 = st.columns([1, 6, 1])
 
