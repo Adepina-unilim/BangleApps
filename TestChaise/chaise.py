@@ -25,13 +25,10 @@ st.set_page_config(page_icon="'TestChaise/app.png'", page_title="Le test du Leve
 
 col1,col2 = st.columns(2)
 
-with col1:
-    st.image(
-    'TestChaise/app.png',
-    width=100,)
+st.image('TestChaise/AdepinaLogo.png')
 
-with col2:
-    st.title("Le test du Lever de Chaise")
+
+st.title("Le test du Lever de Chaise")
 
 
 c29, c30, c31 = st.columns([1, 6, 1])
