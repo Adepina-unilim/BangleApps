@@ -67,9 +67,10 @@ def calculNbre() :
 
     axf = filtrage(Ax)
 
+    st.line_chart(Ax)
+
     st.line_chart(axf)
 
-    st.line_chart(Ax)
 
     #calcul nbre de lever de chaise
 
@@ -92,6 +93,9 @@ def calculNbre() :
             if (axf[i]<med):
                 sup = False
                 compteur = compteur +1
+    
+    st.text("afx(9)" + str(axf[9]))
+    
     return compteur/2		
 
 
@@ -130,7 +134,7 @@ def filtrage(valeurs) :
 
 a = calculNbre()
 
-st.text("afx(9)" + str(afx[9]))
+
 
 
 st.text("le compteur est" + str(compteur))
