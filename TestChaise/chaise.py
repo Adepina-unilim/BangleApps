@@ -44,7 +44,7 @@ st.title("Le test du Lever de Chaise")
 cent = False;
 
 cisteme = st.checkbox("J'utilise une montre CISTEME")
-st.caption("⚠️ Attention : [il faut convertir le fichier .xls en fichier .csv !] (https://www.zamzar.com/fr/convert/xls-to-csv/)", unsafe_allow_html=False)
+st.write("⚠️ Attention : [il faut convertir le fichier .xls en fichier .csv !] (https://www.zamzar.com/fr/convert/xls-to-csv/)", unsafe_allow_html=False)
 if cisteme:
     cent = True
     
