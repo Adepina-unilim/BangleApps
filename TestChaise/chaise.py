@@ -12,11 +12,6 @@ st.set_page_config(page_icon="🪑", page_title="Le test du Lever de Chaise")
 
 
 
-st.markdown(""" <style>
-#MainMenu {visibility: hidden;}
-footer {visibility: hidden;}
-</style> """, unsafe_allow_html=True)
-
 st.image('TestChaise/Adepina logo bleu.png' )
 
 
