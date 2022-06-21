@@ -123,11 +123,11 @@ def filtrage(valeurs) :
 
     st.text("sortie[0]" + str(sortie[0])) 
 
-    sortie[1] = B1 * valeurs[1] + B2 * valeurs[0] - A2 * sortie[0]
+    sortie[1] = B1 * valeurs[1] + B2 * valeurs[0] - A1 * sortie[0]
 
-    sortie[2] = B1 * valeurs[2] + B2 * valeurs[1] + B3 * valeurs[0] - A2 * sortie[1] - A3 * sortie[0]
+    sortie[2] = B1 * valeurs[2] + B2 * valeurs[1] + B3 * valeurs[0] - A1 * sortie[1] - A2 * sortie[0]
 
-    sortie[3] = B1 * valeurs[3] + B2 * valeurs[2] + B3 * valeurs[1] + B4 * valeurs [0] - A2 * sortie[2] - A3 * sortie[1] - A4 * sortie[0]
+    sortie[3] = B1 * valeurs[3] + B2 * valeurs[2] + B3 * valeurs[1] + B4 * valeurs [0] - A1 * sortie[2] - A2 * sortie[1] - A3 * sortie[0]
 
     for i in range (4, len(valeurs)):
         sortie[i] = B1 * valeurs[i] + B2 * valeurs[i-1] + B3 * valeurs[i-2] + B4 * valeurs [i-3] +  B5 * valeurs [i-4] - A2 * sortie[i-1] - A3 * sortie[i-2] - A4 * sortie[i-3] - A5 * sortie[i-4]
