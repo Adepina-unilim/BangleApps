@@ -125,7 +125,7 @@ def filtrage(valeurs) :
 
 a = calculNbre()
 
-st.text(str(a) + " levers de chaises ont été effectués !")
+st.header(str(a) + " levers de chaises ont été effectués !")
 
 st.line_chart(Ax)
 
