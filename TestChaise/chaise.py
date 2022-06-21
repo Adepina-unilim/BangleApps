@@ -8,10 +8,10 @@ import base64
 ###################################
 
 main_bg = "TestChaise/fond.jpg"
-main_bg_ext = "TestChaise/jpg"
+main_bg_ext = "jpg"
 
-side_bg = "fond.jpg"
-side_bg_ext = "TestChaise/jpg"
+side_bg = "TestChaise/fond.jpg"
+side_bg_ext = "jpg"
 
 st.markdown(
     f"""
