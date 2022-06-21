@@ -94,8 +94,8 @@ def calculNbre() :
                 sup = False
                 compteur = compteur +1
     
-    st.text("afx(9)" + str(axf[9]))
-    
+    st.text("afx(0)" + str(axf[9]))
+
     return compteur/2		
 
 
