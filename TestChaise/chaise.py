@@ -31,10 +31,7 @@ def set_png_as_page_bg(png_file):
 
 set_png_as_page_bg('TestChaise/fond.png')
 
-st.markdown(""" <style>
-#MainMenu {visibility: hidden;}
-footer {visibility: hidden;}
-</style> """, unsafe_allow_html=True)
+
 
 
 
