@@ -67,7 +67,9 @@ def calculNbre() :
 
     axf = filtrage(Ax)
 
-    st.line_chart(Ax, axf)
+    st.line_chart(axf)
+
+    st.line_chart(Ax)
 
     #calcul nbre de lever de chaise
 
