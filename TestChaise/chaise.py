@@ -130,4 +130,7 @@ def filtrage(valeurs) :
 
 a = calculNbre()
 
+st.text("afx(9)" + str(afx[9]))
+
+
 st.text("le compteur est" + str(compteur))
