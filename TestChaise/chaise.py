@@ -60,15 +60,10 @@ with c30:
     
 
 def calculNbre() :
-    global compteur
+    global axf
 
     #filtrage des données
     axf = filtrage(Ax)
-
-    st.line_chart(Ax)
-
-    st.line_chart(axf)
-
 
     #calcul nbre de lever de chaise
 
@@ -131,3 +126,7 @@ def filtrage(valeurs) :
 a = calculNbre()
 
 st.text(str(a) + " levers de chaises ont été effectués !")
+
+st.line_chart(Ax)
+
+st.line_chart(axf)
