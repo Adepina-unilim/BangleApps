@@ -127,6 +127,10 @@ a = calculNbre()
 
 st.header(str(a) + " levers de chaises ont été effectués !")
 
+st.subheader("L'accélération non filtrée", anchor=None)
+
 st.line_chart(Ax)
+
+st.subheader("L'accélération filtrée", anchor=None)
 
 st.line_chart(axf)
