@@ -108,7 +108,7 @@ function startRecord(force) {
 
   // now start writing
   var f = require("Storage").open(getFileName(fileNumber), "w");
-  f.write("Time (ms),AX,AY,AZ,MX,MY,MZ\n");
+  f.write("Temps (ms),Ax,Ay,Az,Mx,My,Mz\n");
   var start = getTime();
   var sampleCount = 0;
 
