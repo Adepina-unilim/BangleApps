@@ -23,7 +23,7 @@ def _max_width_():
 
 st.set_page_config(page_icon="'TestChaise/app.png'", page_title="Le test du Lever de Chaise")
 
-col1,col2 = st.beta_columns(2)
+col1,col2 = st.columns(2)
 
 col1.st.image(
     'TestChaise/app.png',
