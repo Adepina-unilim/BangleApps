@@ -44,9 +44,10 @@ st.title("Le test du Lever de Chaise")
 cent = False;
 
 cisteme = st.checkbox("J'utilise une montre CISTEME")
-st.write("⚠️ Attention : [il faut convertir le fichier .xls en fichier .csv !] (https://www.zamzar.com/fr/convert/xls-to-csv/)", unsafe_allow_html=False)
+
 if cisteme:
     cent = True
+    st.caption("⚠️ Attention : il faut convertir le fichier .xls en fichier .csv ! (faisable ici : https://www.zamzar.com/fr/convert/xls-to-csv/)", unsafe_allow_html=False)
     
 
 c29, c30, c31 = st.columns([1, 6, 1])
