@@ -7,34 +7,32 @@ import base64
 
 ###################################
 
-page_bg_img = '''
-<style>
-body {
-background-image: url("https://raw.githubusercontent.com/Adepina-unilim/BangleApps/master/TestChaise/fond.jpg");
-background-size: cover;
-}
-</style>
-'''
 
-st.markdown(page_bg_img, unsafe_allow_html=True)
-def _max_width_():
-    global Ax
-    max_width_str = f"max-width: 1800px"
-    st.markdown(
-        f"""
+@st.cache(allow_output_mutation=True)
+def get_base64_of_bin_file(bin_file):
+    with open(bin_file, 'rb') as f:
+        data = f.read()
+    return base64.b64encode(data).decode()
+
+def set_png_as_page_bg(jpg_file):
+    bin_str = get_base64_of_bin_file(jpg_file)
+    page_bg_img = '''
     <style>
-    .reportview-container .main .block-container{{
-        {max_width_str}
-    }}
-    </style>    
-    """,
-        unsafe_allow_html=True,
-    )
+    body {
+    background-image: url("data:image/jpg;base64,%s");
+    background-size: cover;
+    }
+    </style>
+    ''' % bin_str
+    
+    st.markdown(page_bg_img, unsafe_allow_html=True)
+    return
+
+set_png_as_page_bg('TestChaise/fond.jpg')
 
 
 #st.set_page_config(page_icon="'TestChaise/app.png'", page_title="Le test du Lever de Chaise")
 
-col1,col2 = st.columns(2)
 
 st.image('TestChaise/Adepina logo noir.png' )
 
