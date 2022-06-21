@@ -63,8 +63,6 @@ def calculNbre() :
     global compteur
 
     #filtrage des données
-    st.text(Ax[0])
-
     axf = filtrage(Ax)
 
     st.line_chart(Ax)
