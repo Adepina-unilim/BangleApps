@@ -7,12 +7,6 @@ import base64
 
 ###################################
 
-main_bg = "TestChaise/fond.jpg"
-main_bg_ext = "jpg"
-
-side_bg = "TestChaise/fond.jpg"
-side_bg_ext = "jpg"
-
 page_bg_img = '''
 <style>
 body {
