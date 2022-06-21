@@ -9,6 +9,7 @@ import base64
 
 st.set_page_config(page_icon="🪑", page_title="Le test du Lever de Chaise")
 
+
 @st.cache(allow_output_mutation=True)
 def get_base64_of_bin_file(bin_file):
     with open(bin_file, 'rb') as f:
@@ -30,8 +31,7 @@ def get_base64_of_bin_file(bin_file):
 
 # set_png_as_page_bg('TestChaise/fond.png')
 
-[theme]
-base="dark"
+
 
 st.markdown(""" <style>
 #MainMenu {visibility: hidden;}
