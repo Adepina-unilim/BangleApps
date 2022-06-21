@@ -93,9 +93,6 @@ def calculNbre() :
             if (axf[i]<med):
                 sup = False
                 compteur = compteur +1
-    
-    st.text("ax(0)" + str(Ax[0]))
-    st.text("axf(2)" + str(axf[2]))
 
     return compteur/2		
 
@@ -125,8 +122,6 @@ def filtrage(valeurs) :
 
     sortie[2] = B1 * valeurs[2] + B2 * valeurs[1] + B3 * valeurs[0] - A2 * sortie[1] - A3 * sortie[0]
     
-    st.text("sortie[2]" + str(sortie[2])) 
-
     sortie[3] = B1 * valeurs[3] + B2 * valeurs[2] + B3 * valeurs[1] + B4 * valeurs [0] - A2 * sortie[2] - A3 * sortie[1] - A4 * sortie[0]
 
     for i in range (4, len(valeurs)):
@@ -137,7 +132,4 @@ def filtrage(valeurs) :
 
 a = calculNbre()
 
-
-
-
-st.text("le compteur est" + str(compteur))
+st.text(str(a) + " levers de chaises ont été effectués !")
