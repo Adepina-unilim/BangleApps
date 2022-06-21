@@ -121,11 +121,12 @@ def filtrage(valeurs) :
 
     sortie[0] = B1 * valeurs[0]
 
-    st.text("sortie[0]" + str(sortie[0])) 
-
     sortie[1] = B1 * valeurs[1] + B2 * valeurs[0] - A1 * sortie[0]
 
     sortie[2] = B1 * valeurs[2] + B2 * valeurs[1] + B3 * valeurs[0] - A1 * sortie[1] - A2 * sortie[0]
+    
+    st.text("sortie[2]" + str(sortie[2])) 
+
 
     sortie[3] = B1 * valeurs[3] + B2 * valeurs[2] + B3 * valeurs[1] + B4 * valeurs [0] - A1 * sortie[2] - A2 * sortie[1] - A3 * sortie[0]
 
