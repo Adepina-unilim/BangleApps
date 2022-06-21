@@ -7,11 +7,11 @@ import base64
 
 ###################################
 
-main_bg = "fond.jpg"
-main_bg_ext = "jpg"
+main_bg = "TestChaise/fond.jpg"
+main_bg_ext = "TestChaise/jpg"
 
 side_bg = "fond.jpg"
-side_bg_ext = "jpg"
+side_bg_ext = "TestChaise/jpg"
 
 st.markdown(
     f"""
