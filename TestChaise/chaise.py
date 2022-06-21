@@ -7,7 +7,7 @@ import base64
 
 ###################################
 
-st.set_page_config(page_icon="'TestChaise/app.png'", page_title="Le test du Lever de Chaise")
+st.set_page_config(page_icon="🪑", page_title="Le test du Lever de Chaise")
 
 
 @st.cache(allow_output_mutation=True)
