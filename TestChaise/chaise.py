@@ -21,8 +21,8 @@ def set_png_as_page_bg(png_file):
     page_bg_img = '''
     <style>
     .stApp {
-    background-image: url("data:image/pngbase64,%s")
-    background-size: cover
+    background-image: url("data:image/png;base64,%s");
+    background-size: cover;
     }
     </style>
     ''' % bin_str
@@ -33,12 +33,13 @@ set_png_as_page_bg('TestChaise/fond.png')
 
 
 
+
 st.image('TestChaise/Adepina logo blanc.png' )
 
 
 st.title("Le test du Lever de Chaise")
 
-cent = False
+cent = False;
 
 cisteme = st.checkbox("J'utilise une montre CISTEME")
 if cisteme:
@@ -129,17 +130,17 @@ def filtrage(valeurs) :
 
     if (cent == True) :
         
-        B1 = 5.845142433144161e-08
-        B2 = 2.338056973257664e-07
-        B3 = 3.507085459886496e-07
-        B4 = 2.338056973257664e-07
-        B5 = 5.845142433144161e-08
+        var B1 = 5.845142433144161e-08
+        var B2 = 2.338056973257664e-07
+        var B3 = 3.507085459886496e-07
+        var B4 = 2.338056973257664e-07
+        var B5 = 5.845142433144161e-08
 
-        A1 = 1
-        A2 = -3.917907865391990
-        A3 = 5.757076379118074
-        A4 = -3.760349507694534
-        A5 = 0.921181929191239
+        var A1 = 1
+        var A2 = -3.917907865391990
+        var A3 = 5.757076379118074
+        var A4 = -3.760349507694534
+        var A5 = 0.921181929191239
 
     sortie[0] = B1 * valeurs[0]
 
