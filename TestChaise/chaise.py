@@ -42,7 +42,7 @@ st.title("Le test du Lever de Chaise")
 cent = False;
 
 cisteme = st.checkbox("J'utilise une montre CISTEME")
-if agree:
+if cisteme:
     cent = True
     
 
