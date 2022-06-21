@@ -31,6 +31,11 @@ def set_png_as_page_bg(png_file):
 
 set_png_as_page_bg('TestChaise/fond.png')
 
+st.markdown(""" <style>
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+</style> """, unsafe_allow_html=True)
+
 
 
 
@@ -52,9 +57,7 @@ with c30:
 
     uploaded_file = st.file_uploader(
         label = "Choisir un fichier .csv",
-        key="1",
-        help="Pour activer le 'mode étendu', aller dans le menu latéral > Settings > turn on 'wide mode'",
-        
+        key="1",        
     )
 
     if uploaded_file is not None:
