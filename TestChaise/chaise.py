@@ -21,6 +21,8 @@ def set_png_as_page_bg(png_file):
     .stApp {
     background-image: url("data:image/png;base64,%s");
     background-size: cover;
+    page_icon:"'TestChaise/app.png'"; 
+    page_title:"Le test du Lever de Chaise";
     }
     </style>
     ''' % bin_str
@@ -31,7 +33,7 @@ def set_png_as_page_bg(png_file):
 set_png_as_page_bg('TestChaise/fond.png')
 
 
-st.set_page_config(page_icon="'TestChaise/app.png'", page_title="Le test du Lever de Chaise")
+#st.set_page_config(page_icon="'TestChaise/app.png'", page_title="Le test du Lever de Chaise")
 
 
 st.image('TestChaise/Adepina logo blanc.png' )
