@@ -105,7 +105,7 @@ def calculNbre() :
 def filtrage(valeurs) :
 
 
-    sortie = [0]*len(valeurs)
+    sortie = [0.000000000000000000]*len(valeurs)
 
     B1 = 0.0001832160233696078
     B2 = 0.0007328640934784310
