@@ -108,13 +108,14 @@ function startRecord(force) {
 
   // now start writing
   var f = require("Storage").open(getFileName(fileNumber), "w");
-  f.write("Chrono,Ax,Ay,Az,Mx,My,Mz\n");
+  f.write("Chrono,Ax,Ay,Az,Mx,My,Mz,Pas\n");
   var start = getTime();
   var sampleCount = 0;
 
   function accelHandler(accel) {
 	Bangle.setCompassPower(1);
     var comp = Bangle.getCompass();
+    var pas = Bangle.getStepCount();
     var t = getTime()-start;
     f.write([
       t*1000,
@@ -123,7 +124,8 @@ function startRecord(force) {
       accel.z,
       comp.x,
       comp.y,
-      comp.z].map(n=>Math.round(n*100000000)/100000000).join(",")+"\n");
+      comp.z,
+      pas   ].map(n=>Math.round(n*100000000)/100000000).join(",")+"\n");
 
     sampleCount++;
     layout.samples.label = sampleCount;
