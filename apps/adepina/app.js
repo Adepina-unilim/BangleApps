@@ -1,5 +1,6 @@
 var fileNumber = 0;
 var MAXLOGS = 9;
+deja = false;
 
 function getFileName(n) {
   return "accellog."+n+".csv";
@@ -17,10 +18,19 @@ function showMenu() {
       max : MAXLOGS,
       onchange : v => { fileNumber=v; }
     },
-    /*LANG*/"Commencer" : function() {
+    /*LANG*/"Libre" : function() {
       E.showMenu();
       startRecord();
     },
+     /*LANG*/"30 sec" : function() {
+      E.showMenu();
+      startRecord30();
+    },
+      /*LANG*/"6 min" : function() {
+      E.showMenu();
+      startRecord6min();
+    },
+    
     /*LANG*/"Voir les données" : function() {
       viewLogs();
     },
@@ -137,6 +147,182 @@ function startRecord(force) {
   Bangle.setPollInterval(80); // 12.5 Hz - the default
   Bangle.on('accel', accelHandler);
 }
+
+
+
+
+
+
+
+
+
+
+function startRecord6min(force) {
+  if (!force) {
+    // check for existing file
+    var f = require("Storage").open(getFileName(fileNumber), "r");
+    if (f.readLine()!==undefined)
+      return E.showPrompt(/*LANG*/"Écraser Log "+fileNumber+"?").then(ok=>{
+        if (ok) startRecord30(true); else showMenu();
+      });
+  }
+  // display
+  g.clear(1);
+  Bangle.drawWidgets();
+
+  var Layout = require("Layout");
+  var layout = new Layout({ type: "v", c: [
+      {type:"txt", font:"6x8", label:/*LANG*/"Valeurs", pad:2},
+      {type:"txt", id:"samples", font:"6x8:2", label:"  -  ", pad:5, bgCol:g.theme.bg},
+      {type:"txt", font:"6x8", label:/*LANG*/"Temps", pad:2},
+      {type:"txt", id:"time", font:"6x8:2", label:"  -  ", pad:5, bgCol:g.theme.bg},
+      {type:"txt", font:"6x8:2", label:/*LANG*/"ENREGISTREMENT", bgCol:"#f00", pad:5, fillx:1},
+    ]
+  },{btns:[ // Buttons...
+    {label:/*LANG*/"STOP", cb:()=>{
+      Bangle.removeListener('accel', accelHandler30);
+      showMenu();
+    }}
+  ]});
+  layout.render();
+
+  // now start writing
+  var f = require("Storage").open(getFileName(fileNumber), "w");
+  f.write("Chrono,Ax,Ay,Az,Mx,My,Mz,Pas\n");
+  var start = getTime();
+  var sampleCount = 0;
+
+  function accelHandler30(accel) {
+    if (deja == false)
+    {
+      t=0;
+    }
+    
+    if (t<30)
+    {
+      deja = true;
+      print (t);
+	Bangle.setCompassPower(1);
+    var comp = Bangle.getCompass();
+    var pas = Bangle.getStepCount();
+    t = getTime()-start;
+    f.write([
+      t*1000,
+      accel.x,
+      accel.y,
+      accel.z,
+      comp.x,
+      comp.y,
+      comp.z,
+      pas   ].map(n=>Math.round(n*100000000)/100000000).join(",")+"\n");
+
+    sampleCount++;
+    layout.samples.label = sampleCount;
+    layout.time.label = Math.round(t)+"s";
+    layout.render(layout.samples);
+    layout.render(layout.time);
+    }
+    
+    else
+    {
+      Bangle.removeListener('accel', accelHandler30);
+      showMenu();
+    }
+  }
+
+  Bangle.setPollInterval(80); // 12.5 Hz - the default
+  Bangle.on('accel', accelHandler30);
+}
+
+
+
+
+
+
+
+
+
+
+function startRecord6min(force) {
+  if (!force) {
+    // check for existing file
+    var f = require("Storage").open(getFileName(fileNumber), "r");
+    if (f.readLine()!==undefined)
+      return E.showPrompt(/*LANG*/"Écraser Log "+fileNumber+"?").then(ok=>{
+        if (ok) startRecord6min(true); else showMenu();
+      });
+  }
+  // display
+  g.clear(1);
+  Bangle.drawWidgets();
+
+  var Layout = require("Layout");
+  var layout = new Layout({ type: "v", c: [
+      {type:"txt", font:"6x8", label:/*LANG*/"Valeurs", pad:2},
+      {type:"txt", id:"samples", font:"6x8:2", label:"  -  ", pad:5, bgCol:g.theme.bg},
+      {type:"txt", font:"6x8", label:/*LANG*/"Temps", pad:2},
+      {type:"txt", id:"time", font:"6x8:2", label:"  -  ", pad:5, bgCol:g.theme.bg},
+      {type:"txt", font:"6x8:2", label:/*LANG*/"ENREGISTREMENT", bgCol:"#f00", pad:5, fillx:1},
+    ]
+  },{btns:[ // Buttons...
+    {label:/*LANG*/"STOP", cb:()=>{
+      Bangle.removeListener('accel', accelHandler6min);
+      showMenu();
+    }}
+  ]});
+  layout.render();
+
+  // now start writing
+  var f = require("Storage").open(getFileName(fileNumber), "w");
+  f.write("Chrono,Ax,Ay,Az,Mx,My,Mz,Pas\n");
+  var start = getTime();
+  var sampleCount = 0;
+
+  function accelHandler6min(accel) {
+    if (deja == false)
+    {
+      t=0;
+    }
+    
+    if (t<360)
+    {
+      deja = true;
+      print (t);
+	Bangle.setCompassPower(1);
+    var comp = Bangle.getCompass();
+    var pas = Bangle.getStepCount();
+    t = getTime()-start;
+    f.write([
+      t*1000,
+      accel.x,
+      accel.y,
+      accel.z,
+      comp.x,
+      comp.y,
+      comp.z,
+      pas   ].map(n=>Math.round(n*100000000)/100000000).join(",")+"\n");
+
+    sampleCount++;
+    layout.samples.label = sampleCount;
+    layout.time.label = Math.round(t)+"s";
+    layout.render(layout.samples);
+    layout.render(layout.time);
+    }
+    
+    else
+    {
+      Bangle.removeListener('accel', accelHandler6min);
+      showMenu();
+    }
+  }
+
+  Bangle.setPollInterval(80); // 12.5 Hz - the default
+  Bangle.on('accel', accelHandler6min);
+}
+
+
+
+
 
 
 Bangle.loadWidgets();
