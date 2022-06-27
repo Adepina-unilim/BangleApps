@@ -324,7 +324,6 @@ function startRecord6min(force) {
 
 
 
-
 Bangle.loadWidgets();
 Bangle.drawWidgets();
 showMenu();
