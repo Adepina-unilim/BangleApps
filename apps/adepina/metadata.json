@@ -2,7 +2,7 @@
   "id": "adepina",
   "name": "Adepina",
   "shortName": "Adepina",
-  "version": "1.1.1",
+  "version": "1.01",
   "description": "Enregistre les données issues du magnétomètre et de l'accéléromètre au format CSV",
   "icon": "app.png",
   "tags": "outdoor",
