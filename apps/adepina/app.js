@@ -157,7 +157,7 @@ function startRecord(force) {
 
 
 
-function startRecord6min(force) {
+function startRecord30(force) {
   if (!force) {
     // check for existing file
     var f = require("Storage").open(getFileName(fileNumber), "r");
