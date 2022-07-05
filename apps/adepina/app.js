@@ -1,7 +1,4 @@
 
-Bangle.loadWidgets();
-Bangle.drawWidgets();
-showMenu();
 var fileNumber = 0;
 var MAXLOGS = 9;
 deja = false;
