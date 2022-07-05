@@ -449,7 +449,7 @@ function startRecord6min(force) {
     
     else
     {
-      Bangle.removeListener('accel', accelHandler60);
+      Bangle.removeListener('accel', accelHandler6min);
       Bangle.buzz(200);
       showMenu();
       vibr=false;
